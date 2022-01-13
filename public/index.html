@@ -28,6 +28,11 @@
             console.log('Escuchando', payload);
         });
 
+        socket.on('active-bands', (bands) => {
+            console.clear();
+            console.table( bands);
+        });
+
         // socket.on('new-message', function(payload){
         //     console.log('Listening...', payload);
         // });

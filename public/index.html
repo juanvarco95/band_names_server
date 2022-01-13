@@ -24,9 +24,21 @@
             nombre: 'Juan'
         });
         
-        socket.on('mensaje', function(payload){
+        socket.on('nuevo-mensaje', function(payload){
             console.log('Escuchando', payload);
         });
+
+        // socket.on('new-message', function(payload){
+        //     console.log('Listening...', payload);
+        // });
+
+        // socket.on('nuevo-culo', function(payload){
+        //     console.log('Mostrando el ',payload);
+        // });
+
+
+
+     
     </script>
 </body>
 </html>

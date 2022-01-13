@@ -12,4 +12,20 @@ io.on('connection', client => {
         io.emit('mensaje', { admin: 'Nuevo Mensaje' });
     });
 
+    client.on('emitir-mensaje', (payload) => {
+        console.log(payload);
+        // io.emit('nuevo-mensaje', payload); // Emite a todos los clientes
+        client.broadcast.emit('nuevo-mensaje', payload); // Emite a todos los clientes menos al que lo emitió
+    });
+
+    // client.on('emitir-otro-mensaje', (payload) => {
+    //     console.log(payload);
+    //     client.broadcast.emit('new-message', payload);
+    // });
+
+    // client.on('Culo', (payload) => {
+    //     console.log(payload);
+    //     client.broadcast.emit('nuevo-culo', payload); 
+    // })
+
   });
